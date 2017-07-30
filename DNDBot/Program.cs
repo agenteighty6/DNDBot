@@ -1,6 +1,8 @@
 ﻿using Discord;
 using Discord.WebSocket;
 using System;
+using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DNDBot
@@ -18,7 +20,10 @@ namespace DNDBot
             _client.Log += Log;
             _client.MessageReceived += MessageReceived;
 
-            string token = "MzQxMDg2NTE0NzM2MDA1MTIw.DF8DKw.ma0rx8Gv6qZJ_tmo5HcpzFhGEoA";
+            string TokenPath = @"d:\DNDBot\token.txt";  //File containing bot token
+
+            string token = File.ReadAllText(TokenPath);
+
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
 
