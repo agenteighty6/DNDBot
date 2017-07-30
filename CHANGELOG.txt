@@ -6,3 +6,6 @@ Initial commit!  Bot is functional, connects to Discord properly w/ "!ping" and 
 
 v 0.0.2
 Removed bot token from source code, now points to "token.txt".
+
+v 0.0.3
+Added basic "!roll" functionality.  "!roll" rolls a D20.

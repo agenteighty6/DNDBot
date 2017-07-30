@@ -32,6 +32,8 @@ namespace DNDBot
 
         private async Task MessageReceived(SocketMessage message)
         {
+            Random roll = new Random();
+
             if (message.Content == "!ping")
             {
                 await message.Channel.SendMessageAsync("Pong!");
@@ -39,6 +41,11 @@ namespace DNDBot
             else if (message.Content == "!pong")
             {
                 await message.Channel.SendMessageAsync("Ping!");
+            }
+            else if (message.Content == "!roll")
+            {
+                int result = roll.Next(1, 21);  //rolls a D20
+                await message.Channel.SendMessageAsync("You rolled a " + result + "!");
             }
         }
 
