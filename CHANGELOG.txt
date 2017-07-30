@@ -1,0 +1,5 @@
+DNDBot Changelog
+~~~~~~~~~~~~~~~~
+
+v 0.0.1
+Initial commit!  Bot is functional, connects to Discord properly w/ "!ping" and "!pong" commands working.
